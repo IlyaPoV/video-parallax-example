@@ -192,6 +192,10 @@ video {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto; }
+  @media (max-width: 420px) {
+    .parallax {
+      -webkit-perspective: none;
+              perspective: none; } }
 
 .parallax__layer {
   position: absolute;
