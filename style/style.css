@@ -63,9 +63,23 @@ video {
 .main-nav {
   min-height: 120px;
   background-color: rgba(255, 255, 255, 0.35); }
+  .main-nav .container {
+    display: flex;
+    height: 100%;
+    align-items: center; }
+    @media (max-width: 420px) {
+      .main-nav .container {
+        flex-direction: column;
+        justify-content: space-around;
+        padding-top: 25px;
+        padding-bottom: 25px; } }
 
-.header-logo {
-  margin-right: auto; }
+.logo-lvl {
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center; }
 
 .user-nav {
   margin: 0;
@@ -82,26 +96,45 @@ video {
     font-size: 26px;
     color: #000; }
   @media (max-width: 420px) {
-    .user-nav::before {
-      content: "";
-      width: 40px;
-      height: 4px;
-      background-color: #fff;
-      position: absolute;
-      right: 0;
-      box-shadow: 0px 10px 0px 0px #fff, 0px -10px 0px 0px #fff; } }
+    .user-nav {
+      flex-direction: column;
+      width: 100%;
+      display: none; } }
 
-.user-nav__item a {
-  display: block;
-  padding: 10px 21px;
-  background-color: #fff; }
+.burger {
+  position: relative;
+  height: 25px;
+  width: 40px;
+  display: none; }
+  .burger::before {
+    content: "";
+    width: 40px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    box-shadow: 0px 20px 0px 0px #fff, 0px 10px 0px 0px #fff; }
+  @media (max-width: 420px) {
+    .burger {
+      display: block; } }
 
-@media (max-width: 420px) {
-  .user-nav__item {
-    display: none; } }
+.user-nav__item {
+  text-align: center; }
+  .user-nav__item a {
+    display: block;
+    padding: 10px 21px;
+    background-color: #fff; }
+  @media (max-width: 420px) {
+    .user-nav__item {
+      width: 100%;
+      margin-top: 25px; } }
 
 .trip {
-  margin-right: 35px; }
+  margin-right: 35px;
+  min-width: 300px; }
+  @media (max-width: 420px) {
+    .trip {
+      margin-right: 0; } }
 
 .slogan {
   align-self: center;
@@ -285,6 +318,9 @@ video {
     .pref-list {
       overflow-x: scroll;
       width: auto; } }
+
+.dis-block {
+  display: block; }
 
 .pref-list__item {
   width: 241px;
