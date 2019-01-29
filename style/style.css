@@ -212,6 +212,10 @@ video {
 .parallax__layer--back {
   -webkit-transform: translateZ(-1px) scale(2) translateX(-0.3%);
           transform: translateZ(-1px) scale(2) translateX(-0.3%); }
+  @media (max-width: 420px) {
+    .parallax__layer--back {
+      -webkit-transform: none;
+              transform: none; } }
 
 .join-us {
   height: 100vh;
