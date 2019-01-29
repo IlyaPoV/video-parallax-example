@@ -214,8 +214,8 @@ video {
           transform: translateZ(-1px) scale(2) translateX(-0.3%); }
   @media (max-width: 420px) {
     .parallax__layer--back {
-      -webkit-transform: none;
-              transform: none; } }
+      -webkit-transform: scale(0) translateZ(0) translateX(0);
+              transform: scale(0) translateZ(0) translateX(0); } }
 
 .join-us {
   height: 100vh;
